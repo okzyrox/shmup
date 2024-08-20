@@ -1,4 +1,5 @@
 #include "drawable.h"
+#include "utils.h"
 
 #include "SDL2/SDL.h"
 
@@ -11,6 +12,7 @@ typedef struct Game {
     SDL_Renderer *renderer;
 
     bool running;
+    bool fullscreen;
 
     Drawable *drawables[MAX_DRAWABLES];
     int drawable_count;
@@ -22,3 +24,8 @@ void update(Game *game);
 void render(Game *game);
 void destroy_game(Game *game);
 void add_drawable(Game *game, Drawable *drawable);
+
+IntTuple get_resolution(Game *game);
+
+void set_resolution(Game *game, int width, int height);
+void set_fullscreen(Game *game, bool fullscreen);
