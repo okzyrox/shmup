@@ -21,6 +21,8 @@ set(SourceFiles
     src/main.c
     src/game.c
     src/drawable.c
+    src/utils.c
+    src/ui.c
 )
     
 set(SDL2_LIB libsdl)
