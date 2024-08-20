@@ -7,4 +7,8 @@ cd build
 cmake -G Ninja ..
 ninja
 
+@rem copy assets
+
+xcopy ..\resources\* .\resources\ /E
+
 cd ..
